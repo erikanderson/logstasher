@@ -57,7 +57,7 @@ module LogStasher
         :controller => payload[:controller],
         :format     => extract_format(payload),
         :ip         => request.remote_ip,
-        :request    => request,
+        :request    => request.inspect,
         :method     => payload[:method],
         :path       => extract_path(payload),
         :route      => "#{payload[:controller]}##{payload[:action]}"
